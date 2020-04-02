@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %} 
+ <p>总共{{ movies|length }}个</p>  <!--过滤器 -->
+    <ul class="movie-list">
+        {% for movie in movies %}
+        <li>{{movie.title}} - {{movie.year}}
+            <span class="float-right">
+                <a class="baidu" href="http://v.baidu.com/v?word={{ movie.title }}&ct=301989888&rn=67&pn=0&db=0&s=0&fbl=800&ie=utf-8" target="_blank" title="在百度视频中查找">百度视频</a>
+            </span>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

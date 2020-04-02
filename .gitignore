@@ -3,3 +3,5 @@
 *~
 _pycache_
 env
+.env
+*.db
