@@ -47,10 +47,18 @@
             },
             _tick:function(){
                 // second不是0
-                if(this.second !== 0){
-                    this.second--;
-                    return;
-                }
+                if (parseInt(this.second)!== 0){
+                    this.second--;
+                    if (this.second <10 ){
+                        var s = this.second
+
+                        if (s > -1){
+                            this.second = "0" + s
+                            console.log(s)
+                        }
+                    }
+                    return;
+                }
                 // second是0，minute不是0
                 if(this.minute !== 0){
                     this.minute--;
